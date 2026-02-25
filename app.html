@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Executivo</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="app-body">
+
+<header class="topo">
+  <h2>Relatórios Executivos</h2>
+  <button onclick="logout()">Sair</button>
+</header>
+
+<section class="form-box">
+  <h3>Novo Relatório</h3>
+
+  <input id="mes" placeholder="Mês">
+  <input id="ano" placeholder="Ano">
+  <input id="meta" placeholder="Meta">
+  <input id="faturamento" placeholder="Faturamento">
+  <input id="pec" placeholder="PEC">
+  <input id="ipc" placeholder="IPC">
+  <input id="tkm" placeholder="TKM">
+  <input id="supra" placeholder="Vendas Suprac">
+
+  <button onclick="salvarRelatorio()">Salvar Relatório</button>
+</section>
+
+<section class="dashboard">
+  <div id="cardPrincipal"></div>
+
+  <div class="cards">
+    <div>PEC<br><strong id="dPEC"></strong></div>
+    <div>IPC<br><strong id="dIPC"></strong></div>
+    <div>TKM<br><strong id="dTKM"></strong></div>
+    <div>SUPRAC<br><strong id="dSUPRA"></strong></div>
+  </div>
+
+<div class="grafico-container">
+  <canvas id="grafico"></canvas>
+</div>
+
+  <button onclick="gerarPPT()">Gerar PowerPoint Executivo</button>
+</section>
+
+<!-- CDNs CORRETAS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
